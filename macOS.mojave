@@ -205,7 +205,7 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.triald.plist
 launchctl unload -w /System/Library/LaunchAgents/com.apple.metrickitd.plist
 launchctl unload -w /System/Library/LaunchAgents/com.apple.ContextStoreAgent.plist
 
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.audio.coreaudiod.plist 
+# sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.audio.coreaudiod.plist 
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.ReportCrash.Root.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.ReportMemoryException.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.symptomsd-diag.plist 
@@ -267,8 +267,9 @@ sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mobile.keybagd.
 # added the dmd daemon as the agent is disabled above but not the daemon which just keeps running 
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.dmd.daemon.plist
 # added these opendirectory and opdproxy to unload
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.odproxyd.plist
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
+# Don't do this or you will lose sudo and have to use the osx root shell hack
+# sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.odproxyd.plist
+# sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
 
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.logd.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.syslogd.plist

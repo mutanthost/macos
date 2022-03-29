@@ -246,8 +246,8 @@ sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.appleseed.fbahe
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mobileassetd.plist 
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.PerfPowerServices.plist 
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.applessdstatistics.plist
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.backupd.plist
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.backupd-helper.plist 
+# sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.backupd.plist
+# sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.backupd-helper.plist 
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.revisiond.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.wifivelocityd.plist 
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.icloud.searchpartyd.plist

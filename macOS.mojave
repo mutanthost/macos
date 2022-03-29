@@ -264,6 +264,9 @@ sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.contextstored.p
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mediaremoted.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mobile.keybagd.plist
 
+# added the dmd daemon as the agent is disabled above but not the daemon which just keeps running 
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.dmd.daemon.plist
+
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.logd.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.syslogd.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.newsyslog.plist

@@ -8,16 +8,15 @@
 
 # sudo mdutil -a -i off
 # sudo mdutil -a -i on
-=======
-MacOS:
+# MacOS:
 
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-chsh -s /bin/zsh
+# chsh -s /bin/zsh
 
-sudo mdutil -a -i off
-sudo mdutil -a -i on
+# sudo mdutil -a -i off
+# sudo mdutil -a -i on
 
 sudo  launchctl disable system/com.apple.MRTa
 sudo  launchctl disable system/com.apple.MRTd

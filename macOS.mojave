@@ -266,6 +266,9 @@ sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mobile.keybagd.
 
 # added the dmd daemon as the agent is disabled above but not the daemon which just keeps running 
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.dmd.daemon.plist
+# added these opendirectory and opdproxy to unload
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.odproxyd.plist
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
 
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.logd.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.syslogd.plist

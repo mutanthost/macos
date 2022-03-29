@@ -1,12 +1,13 @@
-MacOS:
+#!/bin/bash
+# MacOS:
 
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-chsh -s /bin/zsh
+#chsh -s /bin/zsh
 
-sudo mdutil -a -i off
-sudo mdutil -a -i on
+# sudo mdutil -a -i off
+# sudo mdutil -a -i on
 
 sudo  launchctl disable system/com.apple.MRTa
 sudo  launchctl disable system/com.apple.MRTd
@@ -32,12 +33,12 @@ defaults write com.apple.dt.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileT
 xcrun simctl delete unavailable
 
 # boot volume in macOS
-csrutil disable
-csrutil authenticated-root disable
-sudo bless --folder /[mountpath]/System/Library/CoreServices --bootefi --create-snapshot
+# csrutil disable
+# csrutil authenticated-root disable
+# sudo bless --folder /[mountpath]/System/Library/CoreServices --bootefi --create-snapshot
 
 #disable/enable mds server
-sudo mdutil -a -i off/on
+# sudo mdutil -a -i off/on
 
 #disable OCSP 
 sudo defaults write /Library/Preferences/com.apple.security.revocation.plist OCSPStyle None
@@ -45,16 +46,16 @@ sudo defaults write /Library/Preferences/com.apple.security.revocation.plist CRL
 sudo defaults write com.apple.security.revocation.plist OCSPStyle None
 sudo defaults write com.apple.security.revocation.plist CRLStyle None
 
-dsenableroot 
-csrutil disable; csrutil enable
-reboot
-sudo spctl --master-disable
-DevToolsSecurity -enable
+# dsenableroot 
+# csrutil disable; csrutil enable
+# reboot
+# sudo spctl --master-disable
+# DevToolsSecurity -enable
 
-sudo softwareupdate --list
-sudo softwareupdate -ia
+# sudo softwareupdate --list
+# sudo softwareupdate -ia
 
-mdutil -i off -d /path/to/volume
+# mdutil -i off -d /path/to/volume
 
 # Disable the "Are you sure you want to open this application?" dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
@@ -66,11 +67,11 @@ defaults write  com.apple.frameworks.diskimages skip-verify-remote -bool true
 
 brew cask install mpv
 
-sudo systemsetup -getcomputersleep
-sudo systemsetup -setcomputersleep Never
-sudo systemsetup -setcomputersleep 10
-sudo pmset -a sleep 0; sudo pmset -a hibernatemode 0; sudo pmset -a disablesleep 1;
-sudo pmset -a sleep 1; sudo pmset -a hibernatemode 3; sudo pmset -a disablesleep 0;
+# sudo systemsetup -getcomputersleep
+# sudo systemsetup -setcomputersleep Never
+# sudo systemsetup -setcomputersleep 10
+# sudo pmset -a sleep 0; sudo pmset -a hibernatemode 0; sudo pmset -a disablesleep 1;
+# sudo pmset -a sleep 1; sudo pmset -a hibernatemode 3; sudo pmset -a disablesleep 0;
 
 xcrun simctl delete unavailable
 defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
@@ -103,7 +104,7 @@ defaults write com.apple.dock springboard-hide-duration -float 0
 defaults write com.apple.dock springboard-page-duration -float 0
 
 defaults write com.apple.universalaccess reduceTransparency -bool true
-sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -deactivate -stop
+# sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -deactivate -stop
 defaults write com.apple.Terminal FocusFollowsMouse -string YES
 defaults write com.apple.finder AppleShowAllFiles true
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -112,8 +113,8 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 sudo defaults write /Library/Preferences/com.apple.driver.AppleIRController DeviceEnabled -int 0
 sudo defaults write /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist ProgramArguments -array-add "-NoMulticastAdvertisements"
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
-sudo nvram BootAudio=%00
-sudo nvram StartupMute=%01
+# sudo nvram BootAudio=%00
+# sudo nvram StartupMute=%01
 
 
 defaults write com.apple.Mail DisableSendAnimations -bool true
@@ -245,9 +246,9 @@ sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.SafeEjectGPUSta
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.dprivacyd.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.sandboxd.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.rtcreportingd.plist
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.bluetoothReporter.plist 
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.bluetoothd.plist 
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.bluetoothuiservice.plist 
+# sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.bluetoothReporter.plist 
+# sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.bluetoothd.plist 
+# sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.bluetoothuiservice.plist 
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.contextstored.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mediaremoted.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mobile.keybagd.plist
